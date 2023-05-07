@@ -19,7 +19,14 @@ export default ({ member, handleClose, handleChange }) => {
             <hgroup>
               <h1>{member.name}</h1>
               <p>{member.bio}</p>
-              <hgroup>
+              <hgroup
+                style={{
+                  display: "flex",
+                  gap: "1rem",
+                  marginTop: "1rem",
+                  justifyContent: "space-around",
+                }}
+              >
                 <a
                   className="outline"
                   href="#"
@@ -28,7 +35,7 @@ export default ({ member, handleClose, handleChange }) => {
                     handleChange(Number(member.id) - 1);
                   }}
                 >
-                  previous
+                  <span className="material-symbols-outlined">arrow_back</span>
                 </a>
                 <a
                   className="outline"
@@ -38,7 +45,9 @@ export default ({ member, handleClose, handleChange }) => {
                     handleChange(Number(member.id) + 1);
                   }}
                 >
-                  next
+                  <span className="material-symbols-outlined">
+                    arrow_forward
+                  </span>
                 </a>
               </hgroup>
             </hgroup>
