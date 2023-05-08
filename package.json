@@ -7,7 +7,8 @@
     "start": "vite --host 0.0.0.0",
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && git add --all && git commit -m 'automated' && git push"
   },
   "dependencies": {
     "@picocss/pico": "^1.5.7",
